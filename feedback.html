@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>تقييم التجربة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* التنسيق العام - ألوان فاتحة ملكية */
+        body { 
+            font-family: 'Tajawal', sans-serif; 
+            background-color: #fcfbf7; 
+            margin: 0; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            min-height: 100vh;
+            color: #444;
+        }
+
+        /* الهيدر الأنيق */
+        .header { 
+            text-align: center; 
+            padding: 40px 20px; 
+            background: #fff; 
+            width: 100%; 
+            border-bottom: 1px solid #eaddca;
+            box-shadow: 0 4px 15px rgba(176, 141, 87, 0.05);
+        }
+        .header h1 { color: #b08d57; margin: 0; font-size: 2rem; }
+        .header p { color: #8d7b68; margin-top: 5px; }
+
+        /* حاوية التقييم الاحترافية */
+        .feedback-card {
+            background: #ffffff;
+            width: 90%;
+            max-width: 500px;
+            margin-top: 30px;
+            padding: 30px;
+            border-radius: 30px;
+            border: 1px solid #eaddca;
+            box-shadow: 0 15px 35px rgba(176, 141, 87, 0.1);
+            text-align: center;
+        }
+
+        /* تنسيق النجوم التفاعلي */
+        .stars { margin: 20px 0; font-size: 30px; color: #eaddca; cursor: pointer; }
+        .stars span:hover, .stars span.active { color: #b08d57; }
+
+        /* الحقول الحديثة */
+        .input-group { margin-bottom: 20px; text-align: right; }
+        label { display: block; margin-bottom: 8px; font-weight: bold; color: #5d4037; font-size: 14px; }
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #eaddca;
+            border-radius: 15px;
+            background: #fdfcf9;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+            transition: 0.3s;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #b08d57;
+            background: #fff;
+            box-shadow: 0 0 8px rgba(176, 141, 87, 0.2);
+        }
+
+        /* زر الإرسال الفخم */
+        .submit-btn {
+            background: #b08d57;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(176, 141, 87, 0.3);
+        }
+        .submit-btn:hover { background: #8d6e63; transform: translateY(-2px); }
+
+        /* أزرار التنقل السفلية */
+        .footer-nav {
+            margin-top: auto;
+            padding: 40px;
+            display: flex;
+            gap: 15px;
+        }
+        .nav-link {
+            text-decoration: none;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .link-home { border: 1px solid #b08d57; color: #b08d57; }
+        .link-logout { border: 1px solid #d32f2f; color: #d32f2f; }
+        .nav-link:hover { opacity: 0.7; }
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>رأيكم يهمنا</h1>
+        <p>شاركينا تجربتك في تصفح معالم المدينة</p>
+    </div>
+
+    <div class="feedback-card">
+        <div class="input-group">
+            <label>الاسم الكامل:</label>
+            <input type="text" placeholder="اكتبي اسمك هنا...">
+        </div>
+
+        <label>تقييمك للموقع:</label>
+        <div class="stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            <p style="font-size: 12px; color: #b08d57; margin-top: 5px;">اضغطي لتقييمنا</p>
+        </div>
+
+        <div class="input-group">
+            <label>اقتراحات للتحسين:</label>
+            <textarea rows="4" placeholder="كيف يمكننا جعل الموقع أفضل؟"></textarea>
+        </div>
+
+        <button class="submit-btn">إرسال التقييم</button>
+    </div>
+
+    <div class="footer-nav">
+        <a href="places.html" class="nav-link link-home">العودة للرئيسية</a>
+        <a href="index.html" class="nav-link link-logout">تسجيل الخروج</a>
+    </div>
+
+</body>
+</html>

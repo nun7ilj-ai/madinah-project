@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+}
+
+body {
+    background-color: #f1ede1; /* لون كريمي */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.login-box {
+    background-color: #ffffff;
+    width: 400px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-radius: 12px;
+}
+
+.main-title {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.welcome-text {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.input-style {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #e2e2e2;
+    background-color: #fafafa;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* تعديل الزر ليكون رابطاً بشكل جذاب */
+.submit-btn-link {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #a48a57; /* اللون البني المطلوب */
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 18px;
+    transition: all 0.3s ease; /* حركة ناعمة */
+}
+
+.submit-btn-link:hover {
+    background-color: #8a7346;
+    transform: translateY(-3px); /* يرتفع قليلاً عند لمسه */
+    box-shadow: 0 5px 15px rgba(164, 138, 87, 0.3);
+}

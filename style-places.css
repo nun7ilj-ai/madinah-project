@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+.main-header {
+    height: 300px;
+    background: url('images/header-bg.jpg') center/cover; /* ضع صورة خلفية هنا */
+    position: relative;
+    background-color: #a48a57;
+}
+
+.overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: -80px auto 50px; /* لرفع البطاقات فوق الهيدر قليلاً */
+    padding: 0 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* تنسيق البطاقة (الخانات) */
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: all 0.4s ease;
+    border: 1px solid #eee;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* ترتفع الخانة عند التأشير عليها */
+    box-shadow: 0 20px 40px rgba(164,138,87,0.3);
+}
+
+.img-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.info {
+    background:rgba(255, 255, 255, 0.6); /* تعتيم أسود شفاف بنسبة 60% */
+    color: #804848;               /* تغيير لون النص للأبيض الصافي */
+    padding: 20px;
+    border-radius: 10px;          /* زوايا مستديرة أنيقة */
+    margin: 10px;
+    text-align: center;           /* توسيط النص */
+    backdrop-filter: blur(5px);   /* إضافة لمسة ضبابية (Blur) خلف النص لمظهر عصري */
+}
+
+.info h3 {
+    color: #ffd700;               /* جعل العنوان بلون ذهبي ليكون أجمل */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.info p {
+    font-size: 1rem;
+    line-height: 1.6;             /* زيادة المسافة بين الأسطر لسهولة القراءة */
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 25px;
+    background-color: #a48a57;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #333;
+}
+/* تنسيق شريط التنقل السفلي */
+.bottom-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: #1a1a1a;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-btn {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 25px;
+    border: 1px solid #b08d57;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    transition: 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: #b08d57;
+    color: #000;
+}
+
+/* لضمان عدم اختفاء المحتوى خلف الشريط السفلي */
+body { padding-bottom: 80px; }
+/* تنسيقات خاصة للهواتف فقط */
+@media (max-width: 600px) {
+    .grid {
+        display: flex;
+        flex-direction: column; /* جعل البطاقات تحت بعضها بدلاً من جانب بعضها */
+        align-items: center;
+        padding: 10px;
+    }
+
+    .card {
+        width: 95%; /* تكبير البطاقة لتأخذ عرض الشاشة */
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem; /* تصغير العنوان ليناسب شاشة الجوال */
+    }
+}
